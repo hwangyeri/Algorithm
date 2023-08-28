@@ -8,5 +8,6 @@ func solution(_ letter:String) -> String {
     "...":"s","-":"t","..-":"u","...-":"v",".--":"w","-..-":"x",
     "-.--":"y","--..":"z"
     ]
+    //공백을 기준으로 문자를 나눈 후, 한글자씩 문자로 바꾸고 합치기
     return letter.split(separator: " ").map { morse[String($0)]! }.joined()
 }
